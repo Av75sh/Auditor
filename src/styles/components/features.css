@@ -1,0 +1,90 @@
+.features-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.feature-card {
+  padding: 40px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-card.white {
+  background: var(--white);
+  border: 2px solid #F0F0F0;
+  color: var(--black-text);
+}
+
+.feature-card.black {
+  background: var(--black-text);
+  color: var(--white);
+}
+
+.feature-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card.black:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.feature-card.white h3 {
+  color: var(--black-text);
+}
+
+.feature-card.black h3 {
+  color: var(--white);
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.feature-card.white p {
+  color: var(--light-gray);
+}
+
+.feature-card.black p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .feature-card {
+    padding: 32px;
+  }
+  
+  .feature-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card h3 {
+    font-size: 20px;
+  }
+}

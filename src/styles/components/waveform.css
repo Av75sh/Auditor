@@ -1,0 +1,238 @@
+.waveform-editor {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--accent-pink) 100%);
+  border-radius: 16px;
+  padding: 24px;
+  color: var(--white);
+  box-shadow: 0 20px 40px rgba(123, 97, 255, 0.3);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.editor-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active,
+.tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.export-btn {
+  background: var(--highlight-red);
+  border: none;
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.timeline {
+  margin-bottom: 16px;
+}
+
+.time-markers {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 8px;
+}
+
+.tracks-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.track:hover,
+.track.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  margin: 4px 0;
+}
+
+.track-label {
+  width: 80px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.track-waveform {
+  flex: 1;
+  position: relative;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.waveform-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 4px;
+  gap: 1px;
+}
+
+.waveform-bar {
+  flex: 1;
+  min-height: 2px;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--white);
+  z-index: 2;
+  transition: left 0.1s ease;
+}
+
+.add-track {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.add-track:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.editor-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-display {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.playback-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--white);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.play-btn {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.additional-controls {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .waveform-editor {
+    padding: 16px;
+  }
+  
+  .editor-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .editor-tabs {
+    justify-content: center;
+  }
+  
+  .track-label {
+    width: 60px;
+    font-size: 12px;
+  }
+  
+  .editor-controls {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .time-display,
+  .additional-controls {
+    order: 2;
+  }
+  
+  .playback-controls {
+    order: 1;
+  }
+}

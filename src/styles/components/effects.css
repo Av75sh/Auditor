@@ -1,0 +1,143 @@
+.effects-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.effects-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.effects-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black-text);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.effects-text p {
+  font-size: 18px;
+  color: var(--light-gray);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.effects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.effects-list li {
+  font-size: 16px;
+  color: var(--light-gray);
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.effects-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-purple);
+  font-weight: bold;
+}
+
+.effects-visual {
+  position: relative;
+}
+
+.effects-image-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid var(--highlight-red);
+  box-shadow: 0 20px 40px rgba(255, 106, 89, 0.2);
+}
+
+.effects-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.effects-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(123, 97, 255, 0.1) 0%, 
+    rgba(255, 97, 210, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.effect-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.control-knob {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  border: 4px solid var(--primary-purple);
+  position: relative;
+}
+
+.control-knob::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 20px;
+  background: var(--primary-purple);
+  border-radius: 2px;
+}
+
+@media (max-width: 968px) {
+  .effects-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  
+  .effects-text h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .effects-section {
+    padding: 60px 0;
+  }
+  
+  .effects-text h2 {
+    font-size: 28px;
+  }
+  
+  .effects-image {
+    height: 300px;
+  }
+  
+  .control-knob {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .control-knob::after {
+    height: 16px;
+    top: 6px;
+  }
+}
