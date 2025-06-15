@@ -16,7 +16,7 @@ const AudioEffects = () => {
           <div className="effects-text">
             <h2>Edit your Audio with awesome effects</h2>
             <p>
-              CleanAudio lets you add professional-grade effects to enhance your audio. 
+              CleanAudio lets you add professional grade effects to enhance your audio. 
               From EQ and compression to reverb and creative filters, our intuitive 
               interface makes it easy to achieve studio-quality results.
             </p>
